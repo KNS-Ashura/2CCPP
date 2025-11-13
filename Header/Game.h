@@ -52,6 +52,7 @@ class Game {
                        const std::string &filled2);
 
         bool isPossibleStart(int x, int y) const;
+
         void placeTile(int playerIndex, int index,int X, int Y);
 
         void askPlayerNumber();

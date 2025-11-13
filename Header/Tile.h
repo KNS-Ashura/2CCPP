@@ -27,10 +27,6 @@ class Tile {
         int getPlayerNb() const;
         int getTilesNb() const;
 
-        void displayUsedTiles();
-
-
-
 };
 
 

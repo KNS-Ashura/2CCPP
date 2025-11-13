@@ -24,49 +24,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c4fce9-82b1-422d-85d7-5dd50f1fff40" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CCPP.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Header/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header/Game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Header/Tile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header/Tile.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/Board.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SRC/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-a63ec4e5fdaf8a390250.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-c5e85b850a3a4d21e7b3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-68d1617116eda86dfd54.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-11-13T15-03-59-0664.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-TDP-Debug-724f253cb6ed6a104b99.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-7ef91c14dc3dae0986e2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/Tile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/Tile.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TDP.dir/SRC/Board.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TDP.dir/SRC/Board.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TDP.dir/SRC/Game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TDP.dir/SRC/Game.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TDP.dir/SRC/Player.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TDP.dir/SRC/Player.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TDP.dir/SRC/Tile.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TDP.dir/SRC/Tile.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TDP.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TDP.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/TDP.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TDP.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
     </list>
     <list id="be813037-540c-4e2f-82a7-2fe192a06085" name="Changes by Louis" comment="">
-      <change beforePath="$PROJECT_DIR$/Header/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Header/Game.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SRC/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRC/Tile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/Tile.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,24 +58,72 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/SRC/Game.cpp">
       <ranges>
-        <range start1="211" end1="211" start2="211" end2="217" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="252" end1="253" start2="258" end2="261" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="256" end1="257" start2="264" end2="265" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="259" end1="260" start2="267" end2="268" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="265" end1="267" start2="273" end2="277" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="270" end1="271" start2="280" end2="281" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="273" end1="274" start2="283" end2="284" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="279" end1="281" start2="289" end2="293" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="284" end1="285" start2="296" end2="297" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="287" end1="288" start2="299" end2="300" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="294" end1="295" start2="306" end2="309" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="298" end1="299" start2="312" end2="313" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="301" end1="302" start2="315" end2="316" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="444" end1="445" start2="458" end2="459" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
-        <range start1="559" end1="559" start2="573" end2="574" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
-        <range start1="591" end1="591" start2="606" end2="607" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
-        <range start1="702" end1="702" start2="718" end2="725" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
-        <range start1="703" end1="703" start2="726" end2="767" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="40" end1="41" start2="40" end2="41" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="46" end1="46" start2="46" end2="54" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="125" end1="131" start2="133" end2="133" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="189" end1="192" start2="191" end2="202" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="206" end1="207" start2="216" end2="217" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="208" end1="210" start2="218" end2="220" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="211" end1="213" start2="221" end2="222" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="214" end1="215" start2="223" end2="223" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="224" end1="227" start2="232" end2="236" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="229" end1="230" start2="238" end2="238" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="232" end1="233" start2="240" end2="240" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="235" end1="236" start2="242" end2="242" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="238" end1="239" start2="244" end2="244" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="242" end1="243" start2="247" end2="247" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="247" end1="248" start2="251" end2="252" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="251" end1="252" start2="255" end2="255" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="258" end1="260" start2="261" end2="261" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="261" end1="262" start2="262" end2="262" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="265" end1="266" start2="265" end2="265" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="274" end1="276" start2="273" end2="273" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="277" end1="278" start2="274" end2="274" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="281" end1="282" start2="277" end2="277" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="290" end1="292" start2="285" end2="285" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="293" end1="294" start2="286" end2="286" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="297" end1="298" start2="289" end2="289" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="306" end1="308" start2="297" end2="297" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="309" end1="310" start2="298" end2="298" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="313" end1="314" start2="301" end2="301" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="341" end1="342" start2="328" end2="328" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="344" end1="345" start2="330" end2="330" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="438" end1="439" start2="423" end2="424" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="448" end1="449" start2="433" end2="434" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="641" end1="642" start2="626" end2="626" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="646" end1="647" start2="630" end2="630" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="696" end1="697" start2="679" end2="680" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="725" end1="725" start2="708" end2="709" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="751" end1="752" start2="735" end2="736" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/SRC/Tile.cpp">
+      <ranges>
+        <range start1="60" end1="61" start2="60" end2="61" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="66" end1="69" start2="66" end2="71" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="87" end1="90" start2="89" end2="91" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="95" end1="97" start2="96" end2="99" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="102" end1="104" start2="104" end2="105" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="108" end1="111" start2="109" end2="114" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="117" end1="118" start2="120" end2="123" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="122" end1="123" start2="127" end2="128" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="124" end1="125" start2="129" end2="135" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="129" end1="129" start2="139" end2="140" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="130" end1="132" start2="141" end2="144" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="136" end1="139" start2="148" end2="154" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="143" end1="146" start2="158" end2="162" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="150" end1="153" start2="166" end2="171" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="156" end1="160" start2="174" end2="180" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="164" end1="164" start2="184" end2="185" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="166" end1="167" start2="187" end2="189" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="171" end1="174" start2="193" end2="197" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="178" end1="181" start2="201" end2="206" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="185" end1="188" start2="210" end2="216" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="192" end1="195" start2="220" end2="225" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="199" end1="202" start2="229" end2="234" changelist="be813037-540c-4e2f-82a7-2fe192a06085" />
+        <range start1="711" end1="713" start2="743" end2="747" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="723" end1="723" start2="757" end2="758" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
+        <range start1="747" end1="754" start2="782" end2="782" changelist="64c4fce9-82b1-422d-85d7-5dd50f1fff40" />
       </ranges>
     </file>
   </component>
@@ -158,7 +181,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763053003449</updated>
-      <workItem from="1763053004487" duration="6373000" />
+      <workItem from="1763053004487" duration="15049000" />
     </task>
     <servers />
   </component>

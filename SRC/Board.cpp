@@ -26,8 +26,8 @@ vector<vector<std::string>> Board::createNewBoard() const {
 void Board::placeBonusSquares() {
     srand(time(0)); // initialise la graine aléatoire une seule fois
 
-    int min = 0;
-    int max = getBoardSize() - 1;
+    int min = 1;
+    int max = getBoardSize() - 2;
 
     int robery = static_cast<int>(ceil(1.5 * getPlayerNumber()));
     int stone = static_cast<int>(ceil(0.5 * getPlayerNumber()));

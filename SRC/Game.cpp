@@ -38,11 +38,19 @@ void Game::launchGame() {
     }
 
 
-    for (int rounds = 0; rounds < 9; rounds++) {
+    for (int rounds = 0; rounds < 2; rounds++) {
         cout << endl << "Round : " << rounds << endl;
         for (int i = 0; i < getPlayerNb(); i++) {
             askMove(i);
         }
+    }
+
+    cout << endl << endl;
+    cout << "Last round ended starting the last part : " << endl;
+    cout << endl <<endl;
+
+    for (int i = 0; i < playerNb; i++) {
+         final1x1Tile(i);
     }
     determineWinner();
 }
@@ -123,12 +131,6 @@ void Game::initTile(int playerNb) {
     tile = new Tile(playerNb);
 
     tile->addUsedTiles();
-
-
-
-    tile->displayUsedTiles();
-
-
 }
 
 void Game::displayBoard() const {
@@ -187,9 +189,17 @@ void Game::displayTilesList(int index) const {
 void Game::displayTiles(int index) const{    vector<vector<string>> displayer(10, vector<string>(10, "."));
     const auto currentTile = tile->getUsedTiles()[index];
 
-    for (const auto & i : currentTile) {
-        for (int j = 0; j < i.size(); j++) {
-            displayer[5 + i[0]][5 + i[1]] = "X";
+    bool first = true;
+
+    for (const auto& pos : currentTile) {
+        int x = pos[0];
+        int y = pos[1];
+
+        if (first) {
+            displayer[5 + x][5 + y] = "\033[31mX\033[0m"; // Rouge
+            first = false;
+        } else {
+            displayer[5 + x][5 + y] = "X";
         }
     }
 
@@ -204,15 +214,13 @@ void Game::displayTiles(int index) const{    vector<vector<string>> displayer(10
 bool Game::isPossiblePlace(int playerIndex, int index,int X, int Y) {
     const auto currentTile = tile->getUsedTiles()[index];
     auto& b = board->getBoard();
-    const std::string& color = players[playerIndex]->getColorCode();
+    const string& color = players[playerIndex]->getColorCode();
     constexpr const char* RESET = "\033[0m";
-    const std::string filled = color + "+" + RESET;
-    const std::string filled2 = color + "*" + RESET;
+    const string filled = color + "+" + RESET;
+    const string filled2 = color + "*" + RESET;
     setNextToMe(false);
-    cout << "1   ligne X = " << X << endl;
-    cout << "2   ligne Y = " << Y << endl;
+
     if (b[X][Y]!="." && b[X][Y]!="E" && b[X][Y]!="R" && b[X][Y]!= "S" && b[X][Y]!= filled) {
-        cout << "case cible fausse" << endl;
         return false;
     }
 
@@ -222,48 +230,39 @@ bool Game::isPossiblePlace(int playerIndex, int index,int X, int Y) {
         int dy = cell[0] + Y;
         int dx = cell[1] + X;
 
-
-        if (X == 0) {
-            cout << "x0" << endl;
+        if (b[dy][dx]!="." && b[dy][dx]!="E" && b[dy][dx]!="R" && b[dy][dx]!= "S") {
+            cout << "coucou" << endl;
+            return false;
+        }if (X == 0) {
             if (!checkRight(b, dx, dy, filled, filled2)) return false;
         }if (X == b.size()-1) {
-            cout << "x max" << endl;
             if (!checkLeft(b, dx, dy, filled, filled2)) return false;
         }if (Y == 0) {
-            cout << "y0" << endl;
             if (!checkDown(b, dx, dy, filled, filled2)) return false;
         }if (Y == b.size()-1){
-            cout << "y max" << endl;
             if (!checkUp(b, dx, dy, filled, filled2)) return false;
         }if (Y >= 1 && Y < b.size()-1) {
-            cout << "y okay " << endl;
             if (!checkUp(b, dx, dy, filled, filled2)) return false;
             if (!checkDown(b, dx, dy, filled, filled2)) return false;
         }if (X >= 1 && X < b.size()-1) {
-            cout << "x okay " << endl;
             if (!checkRight(b, dx, dy, filled, filled2)) return false;
             if (!checkLeft(b, dx, dy, filled, filled2)) return false;
         }
     }
-    cout << "verif finale" << endl;
+
     if (getNextToMe()) {
         return true;
     } else {
-        cout << "caca proute" << endl;
         return false;
     }
 }
 
 bool Game::checkLeft(const vector<vector<string>>& b,
                      int dx, int dy, const string& filled, const string& filled2){
-    cout << "valeur de la ligne x = " << dx-1  << endl;
-    cout << "valeur de la ligne y = " << dy  << endl;
     if (b[dy][dx - 1] == filled || b[dy][dx - 1] == filled2) {
-        cout << "voisin L" << endl;
         setNextToMe(true);
         return true;
     } else if (b[dy][dx - 1] == "." || b[dy][dx - 1]=="E" || b[dy][dx -1 ]=="R" || b[dy][dx - 1]== "S") {
-        cout << "pas voisin L" << endl;
         return true;
     } else {
         return false;
@@ -272,14 +271,10 @@ bool Game::checkLeft(const vector<vector<string>>& b,
 
 bool Game::checkRight(const vector<vector<string>>& b,
                       int dx, int dy, const string& filled, const string& filled2){
-    cout << "valeur de la ligne x = " << dx+1  << endl;
-    cout << "valeur de la ligne y = " << dy  << endl;
     if (b[dy][dx + 1] == filled || b[dy][dx + 1] == filled2) {
-        cout << "voisin R" << endl;
         setNextToMe(true);
         return true;
     } else if (b[dy][dx + 1] == "." || b[dy][dx + 1]=="E" || b[dy][dx + 1 ]=="R" || b[dy][dx + 1]== "S") {
-        cout << "pas voisin R" << endl;
         return true;
     } else {
         return false;
@@ -288,14 +283,10 @@ bool Game::checkRight(const vector<vector<string>>& b,
 
 bool Game::checkUp(const vector<vector<string>>& b,
                    int dx, int dy, const string& filled, const string& filled2){
-    cout << "valeur de la ligne x = " << dx  << endl;
-    cout << "valeur de la ligne y = " << dy-1  << endl;
     if (b[dy - 1][dx] == filled || b[dy - 1][dx] == filled2) {
-        cout << "voisin U" << endl;
         setNextToMe(true);
         return true;
     } else if (b[dy - 1][dx] == "." || b[dy - 1][dx] == "E" || b[dy - 1][dx] == "S" || b[dy - 1][dx] == "R") {
-        cout << "pas voisin u" << endl;
         return true;
     } else {
         return false;
@@ -304,14 +295,10 @@ bool Game::checkUp(const vector<vector<string>>& b,
 
 bool Game::checkDown(const vector<vector<string>>& b,
                      int dx, int dy, const string& filled, const string& filled2){
-    cout << "valeur de la ligne x = " << dx  << endl;
-    cout << "valeur de la ligne y = " << dy+1  << endl;
     if (b[dy + 1][dx] == filled || b[dy + 1][dx] == filled2) {
-        cout << "voisin P" << endl;
         setNextToMe(true);
         return true;
     } else if (b[dy + 1][dx] == "." || b[dy + 1][dx] == "R" || b[dy + 1][dx] == "E" || b[dy + 1][dx] == "S") {
-        cout << "pas voisin P" << endl;
         return true;
     } else {
         return false;
@@ -339,10 +326,8 @@ bool Game::isPossibleStart(int X, int Y) const {
             return false;
         }
     }
-    cout << "tableau non conforme" << endl;
     return false;
 }
-
 
 void Game::placeTile(int playerIndex, int index,int X, int Y){
     const auto currentTile = tile->getUsedTiles()[index];
@@ -436,7 +421,7 @@ void Game::askMove(int playerIndex) {
                 break;
             case 'P':
                 while (true) {
-                    cout << "Line (most top-left square of the tile) : ";
+                    cout << "Ligne of the RED \033[31mX\033[0m : ";
                     cin >> x;
 
                     if (cin.fail()) {
@@ -446,7 +431,7 @@ void Game::askMove(int playerIndex) {
                         continue;
                     }
 
-                    cout << "Column (most top-left square of the tile) : ";
+                    cout << "Column of the RED \033[31mX\033[0m : ";
                     cin >> y;
 
                     if (cin.fail()) {
@@ -639,12 +624,10 @@ bool Game::getNextToMe() const {
 }
 
 void Game::setTileIndex(int newValue) {
-    cout << "value changed for BOOL" << endl;
     this->tileIndex = newValue;
 }
 
 void Game::setNextToMe(bool nexToMe) {
-    cout << "value called for BOOL" << endl;
     this->isNextToMe = nexToMe;
 }
 
@@ -694,7 +677,7 @@ int Game::determineWinner() {
             }
         }
     }
-
+    cout << "The winner is " << winner << endl;
     return winner;
 }
 
@@ -723,6 +706,7 @@ void Game::final1x1Tile(int playerIndex) {
     const std::string& color = players[playerIndex]->getColorCode();
     constexpr const char* RESET = "\033[0m";
 
+    displayPlayerAtIndex(playerIndex);
 
     while (players[playerIndex]->getTileExchangeCoupon() > 0) {
         cout << "You can place a 1x1 tile using your Exchange coupon, please choose where you want to place it :" << endl;
@@ -749,7 +733,7 @@ void Game::final1x1Tile(int playerIndex) {
 
             break;
         }
-        if (isPossibleStart(x, y)) {
+        if (isPossiblePlace(playerIndex, tile->getUsedTiles().size()-1, x, y)) {
             b[x][y] = color + "+" + RESET;
             cout << "1x1  tile placed !" << endl;
             players[playerIndex]->setExchangeCoupon(players[playerIndex]->getTileExchangeCoupon() - 1);
