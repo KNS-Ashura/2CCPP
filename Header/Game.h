@@ -41,7 +41,7 @@ class Game {
         void displayTilesList(int index) const;
         void displayTiles(int index) const;
 
-        bool isPossiblePlace(int playerIndex, int index, int X, int Y);
+        bool isPossiblePlace(int playerIndex, int index, int Y, int X);
         bool checkLeft(const std::vector<std::vector<std::string>> &b, int dx, int dy, const std::string &filled,
                        const std::string &filled2);
         bool checkRight(const std::vector<std::vector<std::string>> &b, int dx, int dy, const std::string &filled,
@@ -75,6 +75,7 @@ class Game {
 
         int determineWinner();
         int countGrassTile(int playerIndex);
+        void final1x1Tile(int playerIndex);
 };
 
 

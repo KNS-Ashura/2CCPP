@@ -209,6 +209,12 @@ bool Game::isPossiblePlace(int playerIndex, int index,int X, int Y) {
     const std::string filled = color + "+" + RESET;
     const std::string filled2 = color + "*" + RESET;
     setNextToMe(false);
+    cout << "1   ligne X = " << X << endl;
+    cout << "2   ligne Y = " << Y << endl;
+    if (b[X][Y]!="." && b[X][Y]!="E" && b[X][Y]!="R" && b[X][Y]!= "S" && b[X][Y]!= filled) {
+        cout << "case cible fausse" << endl;
+        return false;
+    }
 
     for (const auto & cell : currentTile) {
 
@@ -250,56 +256,64 @@ bool Game::isPossiblePlace(int playerIndex, int index,int X, int Y) {
 
 bool Game::checkLeft(const vector<vector<string>>& b,
                      int dx, int dy, const string& filled, const string& filled2){
-    if (b[dx -1 ][dy] == filled || b[dx - 1][dy] == filled2) {
+    cout << "valeur de la ligne x = " << dx-1  << endl;
+    cout << "valeur de la ligne y = " << dy  << endl;
+    if (b[dy][dx - 1] == filled || b[dy][dx - 1] == filled2) {
         cout << "voisin L" << endl;
         setNextToMe(true);
         return true;
-    }else if (b[dx-1][dy] == ".") {
+    } else if (b[dy][dx - 1] == "." || b[dy][dx - 1]=="E" || b[dy][dx -1 ]=="R" || b[dy][dx - 1]== "S") {
         cout << "pas voisin L" << endl;
         return true;
-    }else {
+    } else {
         return false;
     }
 }
 
 bool Game::checkRight(const vector<vector<string>>& b,
-                     int dx, int dy, const string& filled, const string& filled2){
-    if (b[dx +1 ][dy] == filled || b[dx +1][dy] == filled2) {
+                      int dx, int dy, const string& filled, const string& filled2){
+    cout << "valeur de la ligne x = " << dx+1  << endl;
+    cout << "valeur de la ligne y = " << dy  << endl;
+    if (b[dy][dx + 1] == filled || b[dy][dx + 1] == filled2) {
         cout << "voisin R" << endl;
         setNextToMe(true);
         return true;
-    }else if (b[dx +1][dy] == ".") {
+    } else if (b[dy][dx + 1] == "." || b[dy][dx + 1]=="E" || b[dy][dx + 1 ]=="R" || b[dy][dx + 1]== "S") {
         cout << "pas voisin R" << endl;
         return true;
-    }else {
+    } else {
         return false;
     }
 }
 
 bool Game::checkUp(const vector<vector<string>>& b,
-                     int dx, int dy, const string& filled, const string& filled2){
-    if (b[dx][dy-1] == filled || b[dx][dy-1] == filled2) {
+                   int dx, int dy, const string& filled, const string& filled2){
+    cout << "valeur de la ligne x = " << dx  << endl;
+    cout << "valeur de la ligne y = " << dy-1  << endl;
+    if (b[dy - 1][dx] == filled || b[dy - 1][dx] == filled2) {
         cout << "voisin U" << endl;
         setNextToMe(true);
         return true;
-    }else if (b[dx][dy-1] == ".") {
+    } else if (b[dy - 1][dx] == "." || b[dy - 1][dx] == "E" || b[dy - 1][dx] == "S" || b[dy - 1][dx] == "R") {
         cout << "pas voisin u" << endl;
         return true;
-    }else {
+    } else {
         return false;
     }
 }
 
 bool Game::checkDown(const vector<vector<string>>& b,
                      int dx, int dy, const string& filled, const string& filled2){
-    if (b[dx][dy+1] == filled || b[dx][dy+1] == filled2) {
+    cout << "valeur de la ligne x = " << dx  << endl;
+    cout << "valeur de la ligne y = " << dy+1  << endl;
+    if (b[dy + 1][dx] == filled || b[dy + 1][dx] == filled2) {
         cout << "voisin P" << endl;
         setNextToMe(true);
         return true;
-    }else if (b[dx][dy+1] == ".") {
+    } else if (b[dy + 1][dx] == "." || b[dy + 1][dx] == "R" || b[dy + 1][dx] == "E" || b[dy + 1][dx] == "S") {
         cout << "pas voisin P" << endl;
         return true;
-    }else {
+    } else {
         return false;
     }
 }
@@ -442,7 +456,7 @@ void Game::askMove(int playerIndex) {
                         continue;
                     }
 
-                    if (isPossiblePlace(playerIndex,getTileIndex(), x, y)) {
+                    if (isPossiblePlace(playerIndex,getTileIndex(), y, x)) {
                         placeTile(playerIndex, getTileIndex(), x, y);
                         break;
                     }
@@ -557,6 +571,7 @@ void Game::placeStone(int playerIndex) {
     }
     b[x][y] = color + "X" + RESET;
     cout << "Stone placed !!" << endl;
+    displayBoard();
 }
 
 void Game::removeStone(int playerIndex) {
@@ -589,6 +604,7 @@ void Game::removeStone(int playerIndex) {
         if (players[playerIndex]->getTileExchangeCoupon() > 0) {
             b[x][y] = color + "." + RESET;
             cout << "Stone removed !" << endl;
+            displayBoard();
         }
         else {
             cout << "You don't have exchange coupon ! " << endl;
@@ -700,7 +716,55 @@ int Game::countGrassTile(int playerIndex) {
 
 
 
+void Game::final1x1Tile(int playerIndex) {
+    int x;
+    int y;
+    auto& b = board->getBoard();
+    const std::string& color = players[playerIndex]->getColorCode();
+    constexpr const char* RESET = "\033[0m";
 
+
+    while (players[playerIndex]->getTileExchangeCoupon() > 0) {
+        cout << "You can place a 1x1 tile using your Exchange coupon, please choose where you want to place it :" << endl;
+        while (true) {
+            cout << "Enter coord X: ";
+            cin >> x;
+
+            if (cin.fail()) {
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cout << "Invalid input, please enter a valid number." << endl;
+                continue;
+            }
+
+            cout << "Enter coord Y: ";
+            cin >> y;
+
+            if (cin.fail()) {
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cout << "Invalid input, please enter a valid number." << endl;
+                continue;
+            }
+
+            break;
+        }
+        if (isPossibleStart(x, y)) {
+            b[x][y] = color + "+" + RESET;
+            cout << "1x1  tile placed !" << endl;
+            players[playerIndex]->setExchangeCoupon(players[playerIndex]->getTileExchangeCoupon() - 1);
+            displayBoard();
+            break;
+        }
+        else {
+            cout << "You can't place a tile here. Try again." << endl;
+        }
+
+
+    }
+
+
+}
 
 
 
